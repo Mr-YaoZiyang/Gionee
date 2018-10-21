@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	<servlet>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.IndexServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PhoneServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.PhoneServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PhoneServlet</servlet-name>
+		<url-pattern>/phone.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AccessoriesServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.AccessoriesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AccessoriesServlet</servlet-name>
+		<url-pattern>/accessories.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/register.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductDetailServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.ProductDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductDetailServlet</servlet-name>
+		<url-pattern>/productDetail.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>NewsListServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.NewsListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsListServlet</servlet-name>
+		<url-pattern>/newsList.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>NewsDetailServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.NewsDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NewsDetailServlet</servlet-name>
+		<url-pattern>/newsDetail.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShoppingCarServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.ShoppingCarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShoppingCarServlet</servlet-name>
+		<url-pattern>/loginUser/shoppingCar.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowShoppingCarServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.ShowShoppingCarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowShoppingCarServlet</servlet-name>
+		<url-pattern>/loginUser/showShoppingCar.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.DeleteProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteProductServlet</servlet-name>
+		<url-pattern>/loginUser/deleteProduct.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddOrderServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.AddOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddOrderServlet</servlet-name>
+		<url-pattern>/loginUser/addOrder.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/logout.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateShoppingCountServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.UpdateShoppingCountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateShoppingCountServlet</servlet-name>
+		<url-pattern>/loginUser/updateShoppingCount.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ShowOrderServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.ShowOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowOrderServlet</servlet-name>
+		<url-pattern>/loginUser/showOrder.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CityServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.CityServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CityServlet</servlet-name>
+		<url-pattern>/loginUser/city.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddAddressServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.AddAddressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddAddressServlet</servlet-name>
+		<url-pattern>/loginUser/addAddress.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderFromServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.OrderFromServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderFromServlet</servlet-name>
+		<url-pattern>/loginUser/orderFrom.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PersonalCenterServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.PersonalCenterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PersonalCenterServlet</servlet-name>
+		<url-pattern>/loginUser/personalCenter.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckPwdServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.CheckPwdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CheckPwdServlet</servlet-name>
+		<url-pattern>/loginUser/checkPwd.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdatePwdServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.UpdatePwdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdatePwdServlet</servlet-name>
+		<url-pattern>/updatePwd.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FindUserInfo</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.FindUserInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FindUserInfo</servlet-name>
+		<url-pattern>/loginUser/findUserInfo.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>UpdateUserInfoServlet</servlet-name>
+		<servlet-class>com.oracleoaec.servlet.UpdateUserInfoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserInfoServlet</servlet-name>
+		<url-pattern>/loginUser/updateUserInfo.do</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>SessionFilter</filter-name>
+		<filter-class>com.oracleoaec.filter.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/loginUser/*</url-pattern>
+	</filter-mapping>
+</web-app>

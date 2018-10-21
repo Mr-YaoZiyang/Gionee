@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- //引入 jQuery 核心库，这里采用的是 2.0 -->
+    <script type="text/javascript" src="easyui-1.6.3/jquery.min.js"></script>
+    <!-- //引入 jQuery EasyUI 核心库，这里采用的是 1.3.6 -->
+    <script type="text/javascript" src="easyui-1.6.3/jquery.easyui.min.js"></script>
+    <!-- //引入 EasyUI 中文提示信息 -->
+    <script type="text/javascript" src="easyui-1.6.3/locale/easyui-lang-zh_CN.js"></script>
+   <!--  //引入 EasyUI 核心 UI 文件 CSS -->
+    <link rel="stylesheet" type="text/css" href="easyui-1.6.3/themes/default/easyui.css" />
+    <!-- //引入 EasyUI 图标文件 -->
+    <link rel="stylesheet" type="text/css" href="easyui-1.6.3/themes/icon.css" />
+    <style>
+        .divBorder{
+            border: 1px solid #2aabd2;
+        }
+        iframe{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 648px;
+        }
+        .divBorder a{
+            display: block;
+            text-decoration:none;
+            color:#333;
+        }
+    </style>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north'" style="height:80px;padding:20px">
+        <!-- <h5>金立手机后台管理系统</h5> -->
+        <b style="font-size: 28px;">金立手机后台管理系统</b>
+    </div>
+
+    <div data-options="region:'south'" align="center" style="height:30px;padding:6px" >
+        金立技术有限公司版权所有
+    </div>
+
+    <div data-options="region:'west',title:'导航菜单',split:true" style="width:250px;">
+        <ul id="MenuTree" class="easyui-tree">
+            <div id="adID" class="easyui-accordion" data-options="fit:false,border:true,multiple:false,selected:-1" style="width:100%;height:502px;">
+                <div title="数据表" data-options="iconCls:'icon-reload'"
+                    style="padding:5px;">
+                    <p><a href="">用户表</a></p>
+                    <p><a href="">手机表</a></p>
+                    <p><a href="">配件表</a></p>
+                    <p><a href="">订单表</a></p>
+                    <p><a href="">地址表</a></p>
+                    <p><a href="">产品图片表</a></p>
+                </div>
+
+            </div>
+        </ul>
+    </div>
+
+    <div data-options="region:'center'">
+         <div id="mainTabs" class="easyui-tabs" data-options="fit:true">
+            <iframe src="UserInfo.html" frameborder="0"></iframe>
+         </div>
+    </div>
+
+</body>
+</html>
