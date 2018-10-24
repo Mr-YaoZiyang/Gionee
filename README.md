@@ -1,2 +1,6 @@
 # Gionee
-仿制金立官网，用到的技术：java+jsp+servlet,数据库采用的Oracle数据
+仿制金立官网
+java+jsp+servlet+maven+Oracle
+
+
+数据库脚本为Gionee.dmp和Gionee.sql文件
