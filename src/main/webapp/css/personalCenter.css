@@ -1,0 +1,68 @@
+.info .row{
+    height: 100%;
+    // border: 1px solid #000;
+}
+#Repwd,#Info,#Address{
+    display: none;
+
+}
+#Info p ,#Address p,#Repwd p,#Order p{
+    font-weight:bold;
+    font-size:30px;
+}
+.table img{
+    height: 50px;
+    width: auto;
+}
+.table-hover th,.table-hover td{
+    text-align: center;
+    padding: 5px;
+}
+#Order a{
+	text-decoration: none;
+	color:#000;
+}
+
+#footprint a{
+    text-decoration: none;
+    color:#ccc;
+}
+#footprint li{
+    list-style-type: none;
+    margin-left: 20px;
+    width: 260px;
+    height: 385px;
+    margin-bottom: 10px;
+    background: #fff;
+    float: left;
+}
+#footprint img{
+   	height: 240px;
+    width: auto;
+    position: relative;
+    top: 23px;
+    left: 0;
+}
+#footprint p{
+	height:40px;
+    position: relative;
+    top: 25px;
+    text-align: center;
+}
+#footprint .phoneName{
+    color: #0f0e0e;
+    font-size: 16px;
+}
+#footprint.phoneDetail{
+    color: #9e9e9e;
+    font-size: 14px;
+    padding-top: 3px;
+}
+#footprint .phonePrice{
+    color: #fe6a00;
+    font-size: 24px;
+    padding-top: 12px;
+}
+#footprint .phonePrice span{
+    font-size: 18px;
+}
