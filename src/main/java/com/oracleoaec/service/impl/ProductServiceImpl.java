@@ -74,9 +74,8 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Map<String, Object>> searchProByProName(String proName,Integer proClass) {
 		baseDao = new BaseDaoImpl();
-		String sql = "select * from products"
+		String sql = "select * from products "
 		+ " where pro_name like '%" + proName + "%' and pro_class = "+proClass;
-		System.out.println(sql);
 		List<Map<String, Object>> queryForlist = baseDao.queryForlist(sql);
 		if (queryForlist.size() == 0) {
 			return null;

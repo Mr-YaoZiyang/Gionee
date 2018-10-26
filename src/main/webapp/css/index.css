@@ -87,8 +87,8 @@
 .jmpj .col-md-4{
 	padding:0;
 	margin-bottom: 20px;
-	transition:box-shadow 1s;
-	-webkit-transition:box-shadow 1s; /* Safari */
+	transition:box-shadow 5s;
+	-webkit-transition:box-shadow 5s; /* Safari */
 	background:#fff;
 	height: 343px;
 	text-align:center;

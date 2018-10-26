@@ -29,16 +29,10 @@ import com.oracleoaec.service.impl.UserServiceImpl;
 
 public class ShowOrderServlet extends HttpServlet {
 
-	/* (non-Javadoc)
-	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
-	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
 		String[] shoppingId = req.getParameterValues("shoppingId");
-		
-		
-		
-		
 		HttpSession session = req.getSession();
 		Map userMap = (Map) session.getAttribute("userMap");
 		BigDecimal  userId= (BigDecimal) userMap.get("USER_ID");

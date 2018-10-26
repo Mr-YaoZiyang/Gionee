@@ -32,16 +32,15 @@ public class LoginServlet extends HttpServlet {
 		UserService us = new UserServiceImpl();
 		Map<String, Object> userMap = us.login(userAccount, userPwd);
 		Map map = new HashMap();
-		
 		if(userMap==null) {
 			map.put("flag", false);
 		}else {
 			map.put("flag", true);
 			Cookie cookie = new Cookie("user", userAccount+","+userPwd);
 			cookie.setMaxAge(60*60*24*7);
+			resp.addCookie(cookie);
 			HttpSession session = req.getSession();
 			session.setAttribute("userMap", userMap);
-			resp.addCookie(cookie);
 		}
 		JSONObject jsonobj = JSONObject.fromObject(map);
 		resp.getWriter().println(jsonobj);

@@ -110,13 +110,13 @@ function findUserInfo(){
 				//性别
 				if(data.USER_SEX == 0){
 					$('#sex').html(
-							"<input type='radio' name='sex' value='1' />男" +
-							"<input type='radio' name='sex' checked='checked' value='0' />女"
+							"<input type='radio' name='sex' value='1' onclick="+alert(this.val())+"  />男" +
+							"<input type='radio' name='sex' checked='checked' value='0'  />女"
 					);
 				}else{
 					$('#sex').html(
 							"<input type='radio' name='sex' checked='checked' value='1' />男" +
-							"<input type='radio' name='sex' value='0' />女"
+							"<input type='radio' name='sex' value='0' onclick="+alert(this.val())+" />女"
 					);
 				}
 				//生日
