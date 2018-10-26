@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.oracleoaec.pojo.Users;
 import com.oracleoaec.service.UserService;
 import com.oracleoaec.service.impl.UserServiceImpl;
+import com.oracleoaec.util.MD5;
 
 import net.sf.json.JSONObject;
 
@@ -36,8 +37,8 @@ public class RegisterServlet extends HttpServlet {
 		Map map = new HashMap<>();
 		
 		Users u = new Users();
-		u.setUserAccount(userAccount);
-		u.setUserPwd(userPwd);
+		u.setUserAccount(MD5.md5(userAccount, "1"));
+		u.setUserPwd(MD5.md5(userPwd, "1"));
 		u.setUserName(userName);
 		u.setUserTel(userTel);
 		u.setUserStates(0);

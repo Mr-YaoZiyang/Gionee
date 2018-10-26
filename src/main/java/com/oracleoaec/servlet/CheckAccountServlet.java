@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oracleoaec.service.UserService;
 import com.oracleoaec.service.impl.UserServiceImpl;
+import com.oracleoaec.util.MD5;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -27,7 +28,7 @@ public class CheckAccountServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		String userAccount = req.getParameter("userAccount");
 		UserService us = new UserServiceImpl();
-		Map<String,Object> list = us.queryIsAccount(userAccount);
+		Map<String,Object> list = us.queryIsAccount(MD5.md5(userAccount, "1"));
 		JSONObject jo = JSONObject.fromObject(list);
 		resp.getWriter().print(jo);
 		resp.getWriter().flush();
