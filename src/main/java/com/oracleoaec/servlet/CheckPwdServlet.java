@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.oracleoaec.service.UserService;
 import com.oracleoaec.service.impl.UserServiceImpl;
+import com.oracleoaec.util.MD5;
 
 import net.sf.json.JSONObject;
 
@@ -33,7 +34,7 @@ public class CheckPwdServlet extends HttpServlet {
 		Map<String, Object> queryUserById = us.queryUserById(userId.toString());
 		String userPwd = (String) queryUserById.get("USER_PWD");
 		Map map = new HashMap<>();
-		if(pwd.equals(userPwd)) {
+		if(MD5.md5(pwd, "1").equals(userPwd)) {
 			map.put("flag", true);
 		}else {
 			map.put("flag", false);

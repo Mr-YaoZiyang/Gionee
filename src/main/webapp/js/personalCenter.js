@@ -103,36 +103,50 @@ function findUserInfo(){
 			function(data){
 				//用户名
 				$('#name').html(
-						"<input type='text' name='name' value="+data.USER_NAME+">"
+						"<input type='text' name='name' value="+data.USER_NAME+" class='form-control'>"
 				);
-				
-				
 				//性别
-				if(data.USER_SEX == 0){
+				if(data.USER_SEX == 1){
 					$('#sex').html(
-							"<input type='radio' name='sex' value='1' onclick="+alert(this.val())+"  />男" +
-							"<input type='radio' name='sex' checked='checked' value='0'  />女"
-					);
+							"<div class='radio'>" +
+								"<label>" +
+									"<input type='radio' name='sex' value='1' checked>男"+
+								"</label>" +
+							"</div>" +
+							"<div class='radio'>" +
+								"<label>" +
+									"<input type='radio' name='sex' value='0'>女" +
+								"</label>" +
+							"</div>" 
+							);
 				}else{
 					$('#sex').html(
-							"<input type='radio' name='sex' checked='checked' value='1' />男" +
-							"<input type='radio' name='sex' value='0' onclick="+alert(this.val())+" />女"
+							"<div class='radio'>" +
+								"<label>" +
+									"<input type='radio' name='sex' value='1'>男"+
+								"</label>" +
+							"</div>" +
+							"<div class='radio'>" +
+								"<label>" +
+									"<input type='radio' name='sex' value='0'  checked>女" +
+								"</label>" +
+							"</div>" 
 					);
 				}
 				//生日
 				if(data.USER_BIRTHDAY==null){
 					$('#birthday').html(
-							"<input type='text' name='birthday' value=''>"
+							"<input type='text' name='birthday' value=' ' class='form-control'>"
 					);
 				}else{
 					$('#birthday').html(
-							"<input type='text' name='birthday' value="+data.USER_BIRTHDAY+">"
+							"<input type='text' name='birthday' value="+data.USER_BIRTHDAY+" class='form-control'>"
 					);
 				}
 				
 				//电话
 				$('#tel').html(
-						"<input type='text' name='tel' value="+data.USER_TEL+">"
+						"<input type='text' name='tel' value="+data.USER_TEL+" class='form-control'>"
 				);
 				
 			},
@@ -160,7 +174,11 @@ function updateUserInfo(){
 				}
 				
 				//生日
-				$('#birthday').text(data.USER_BIRTHDAY);
+				if(data.USER_BIRTHDAY==null){
+					$('#birthday').text(" ");
+				}else{
+					$('#birthday').text(data.USER_BIRTHDAY);
+				}
 				//电话
 				$('#tel').text(data.USER_TEL);
 			},

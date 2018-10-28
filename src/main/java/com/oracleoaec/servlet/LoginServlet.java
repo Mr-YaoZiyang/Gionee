@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.oracleoaec.service.UserService;
 import com.oracleoaec.service.impl.UserServiceImpl;
+import com.oracleoaec.util.MD5;
 
 import net.sf.json.JSONObject;
 
@@ -28,15 +29,14 @@ public class LoginServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		String userAccount = req.getParameter("userAccount");
 		String userPwd = req.getParameter("userPwd");
-		System.out.println(userAccount+","+userPwd);
 		UserService us = new UserServiceImpl();
-		Map<String, Object> userMap = us.login(userAccount, userPwd);
+		Map<String, Object> userMap = us.login(MD5.md5(userAccount, "1"), MD5.md5(userPwd, "1"));
 		Map map = new HashMap();
 		if(userMap==null) {
 			map.put("flag", false);
 		}else {
 			map.put("flag", true);
-			Cookie cookie = new Cookie("user", userAccount+","+userPwd);
+			Cookie cookie = new Cookie("user", MD5.md5(userAccount, "1")+","+MD5.md5(userPwd, "1"));
 			cookie.setMaxAge(60*60*24*7);
 			resp.addCookie(cookie);
 			HttpSession session = req.getSession();
