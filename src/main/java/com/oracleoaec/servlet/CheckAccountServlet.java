@@ -29,16 +29,11 @@ public class CheckAccountServlet extends HttpServlet {
 		String userAccount = req.getParameter("userAccount");
 		UserService us = new UserServiceImpl();
 		Map<String,Object> list = us.queryIsAccount(MD5.md5(userAccount, "1"));
+
 		JSONObject jo = JSONObject.fromObject(list);
 		resp.getWriter().print(jo);
 		resp.getWriter().flush();
 		resp.getWriter().close();
-		
-		
-		
-		
-		
-		
 	}
 
 	

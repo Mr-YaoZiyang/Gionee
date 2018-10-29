@@ -119,10 +119,6 @@
                         <p>个人资料</p>
                         <table class="table">
                             <tr>
-                                <td>登录账号：</td>
-                                <td>${requestScope.queryUserById.USER_ACCOUNT }</td>
-                            </tr>
-                            <tr>
                                 <td>用户名：</td>
                                 <td id="name">${requestScope.queryUserById.USER_NAME }</td>
                             </tr>
@@ -154,17 +150,6 @@
                                 <td>手机号码：</td>
                                 <td id="tel"><span>${requestScope.queryUserById.USER_TEL }</span></td>
                             </tr>
-                            <!-- <tr>
-                                <td>居住地址：</td>
-                                <td>
-                                    <select name="">
-                                        <option value="">--请选择--</option>
-                                    </select>
-                                    <select name="">
-                                        <option value="">--请选择--</option>
-                                    </select>
-                                </td>
-                            </tr> -->
                            	<tr>
                                 <td></td>
                                 <td>

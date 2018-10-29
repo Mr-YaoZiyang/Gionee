@@ -29,7 +29,6 @@ public class LoginServlet extends HttpServlet {
 		resp.setCharacterEncoding("UTF-8");
 		String userAccount = req.getParameter("userAccount");
 		String userPwd = req.getParameter("userPwd");
-		System.out.println(userAccount+","+userPwd);
 		UserService us = new UserServiceImpl();
 		Map<String, Object> userMap = us.login(MD5.md5(userAccount, "1"), MD5.md5(userPwd, "1"));
 		Map map = new HashMap();

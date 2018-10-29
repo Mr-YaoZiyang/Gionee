@@ -30,7 +30,6 @@ public class UpdateUserInfoServlet extends HttpServlet {
 		String sex = req.getParameter("sex");	
 		String birthday = req.getParameter("birthday");	
 		String tel = req.getParameter("tel");
-		System.out.println(name+","+sex+","+birthday+","+tel);
 		HttpSession session = req.getSession();
 		Map<String,Object> userMap = (Map<String, Object>) session.getAttribute("userMap");
 		BigDecimal userId = (BigDecimal) userMap.get("USER_ID");
@@ -48,7 +47,6 @@ public class UpdateUserInfoServlet extends HttpServlet {
 			userMap.put("USER_BIRTHDAY", birthday);
 			userMap.put("USER_TEL", tel);
 		}
-		System.out.println(userMap.toString());
 		Map<String, Object> queryUserById = us.queryUserById(userId.toString());
 		JSONObject jo = JSONObject.fromObject(queryUserById);
 		resp.setContentType("text/html;charset=utf-8");

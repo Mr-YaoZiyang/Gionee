@@ -29,7 +29,6 @@ public class FindUserInfo extends HttpServlet {
 		HttpSession session = req.getSession();
 		Map<String, Object> userMap = (Map<String, Object>) session.getAttribute("userMap");
 		BigDecimal userId = (BigDecimal) userMap.get("USER_ID");
-		
 		UserService us = new UserServiceImpl();
 		Map<String, Object> queryUserById = us.queryUserById(userId.toString());
 		

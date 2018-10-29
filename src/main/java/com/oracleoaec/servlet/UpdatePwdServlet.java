@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 import com.oracleoaec.service.UserService;
 import com.oracleoaec.service.impl.UserServiceImpl;
+import com.oracleoaec.util.MD5;
 
 import net.sf.json.JSONObject;
 
@@ -32,7 +33,7 @@ public class UpdatePwdServlet extends HttpServlet{
 		BigDecimal userId = (BigDecimal) userMap.get("USER_ID");
 		
 		UserService us = new UserServiceImpl();
-		int i = us.updateUserPwd(pwd, userId.toString());
+		int i = us.updateUserPwd(MD5.md5(pwd, "1"), userId.toString());
 		Map map = new HashMap<>();
 		if(i>0) {
 			map.put("flag", true);

@@ -11,7 +11,7 @@ public class MD5 {
 	 * @return 密文
 	 * @throws Exception
 	 */
-	public static String md5(String text, String key) {
+	public static String md5(String text, String key) { 
 		// 加密后的字符串
 		String encodeStr = DigestUtils.md5Hex(text + key);
 		//System.out.println("MD5加密后的字符串为:encodeStr=" + encodeStr);

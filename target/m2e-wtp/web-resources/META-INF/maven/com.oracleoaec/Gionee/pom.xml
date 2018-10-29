@@ -101,11 +101,14 @@
 	    <artifactId>ojdbc14</artifactId>
 	    <version>10.2.0.2</version>
 	</dependency>
+<<<<<<< HEAD
 	<dependency>
 		<groupId>org.apache.commons</groupId>
 		<artifactId>commons-lang3</artifactId>
 		<version>3.3.2</version>
 	</dependency>
+=======
+>>>>>>> 1713a2c87526aad21d3fa10b15c30365d66596a3
 	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 	<dependency>
 	    <groupId>commons-codec</groupId>
